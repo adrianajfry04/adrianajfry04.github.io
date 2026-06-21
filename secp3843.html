@@ -141,19 +141,23 @@
 								<p>Group project (Group 7) &mdash; proposal, development, and report. Built an automated ELT pipeline utilizing the Medallion Architecture to transition raw supply chain data into analytics-ready insights for inventory risk assessment.</p>
 
 								<h3>Problem & overview</h3>
-								<p>PPG faced challenges managing inventory data dispersed over several operational datasets, limiting visibility into excess inventory, dead stock, and expired supplies. We designed an automated data pipeline to proactively detect Recoverable Assets (RA) and Magna Carta obsolete inventory, ultimately allowing for the identification of over $1.73M in excess capital.</p>
+								<p>PPG faced challenges managing inventory data dispersed over several operational datasets, limiting visibility into excess inventory, dead stock, and expired supplies. We designed an automated data pipeline to proactively address <strong>seven core business questions</strong> regarding inventory health. By detecting Recoverable Assets (RA) and Magna Carta obsolete inventory, the system ultimately allows for the identification of over $1.73M in excess capital and flags downstream impacts on customer fulfillment.</p>
 
 								<h3>Architecture</h3>
 								<span class="image fit"><img src="images/Azure Data Orchestration.png" alt="Medallion Architecture Pipeline Diagram" /></span>
 								<p><strong>Data Flow:</strong> Six Operational CSVs &rarr; Azure Data Factory (Bronze Layer Ingestion) &rarr; Azure Data Lake &rarr; Azure Databricks (Silver Layer Cleaning & Business Logic) &rarr; Azure SQL Database (Gold Layer Star Schema) &rarr; Microsoft Power BI (Interactive Dashboards).</p>
+									<p><strong>Data Architecture:</strong> We implemented a Medallion Architecture, with a Bronze Layer for raw data ingestion, a Silver Layer for incremental cleaning and business rule application, and a Gold Layer structured as a dimensional Star Schema to support efficient analytics and reporting.</p>
+									<p><strong>Tools & Technologies:</strong> Azure Data Factory for orchestration, Azure Data Lake for scalable storage, Azure Databricks for Spark-based transformations, Azure SQL Database for structured storage and querying, and Microsoft Power BI for interactive visualization.</p>
+									<p><strong>Gold Layer Implementation:</strong> I established the <code>ppg_curated</code> database to serve as our analytics-ready Gold Layer. Using automated <code>CREATE EXTERNAL TABLE</code> scripts, the structured Star Schema (utilizing tables like DimMaterial, DimDate, and FactInventoryStatus) was optimized specifically for high-performance querying, acting as the single source of truth for the reporting layer.</p>
 
 								<h3>My role & contributions</h3>
-								<span class="image fit"><img src="images/PPG Dashboard.png" alt="PPG Case Study Dashboard" /></span>
+								<span class="image fit"><img src="images/PPG Dashboard.png" alt="PPG Consolidated Inventory Risk Management Dashboard" /></span>
 								<p>Beyond collaborative pipeline development, I drafted and refined the technical justifications for the data architecture layers, emphasizing the Auditability, Quality Control, and Performance arguments behind our Bronze/Silver/Gold strategy. I also contributed to structuring the dimensional Star Schema in the Azure SQL Database to feed our interactive Power BI logistics dashboards.</p>
+								<p>To optimize dashboard performance, I implemented the Power BI data connection using <strong>Import Mode</strong>. Because the ELT pipeline runs on a scheduled batch-refresh cycle from the Gold Layer, importing the data directly into memory ensures the dashboard can quickly respond to logistics managers' unique business questions with zero query latency, even when filtering complex metrics.</p>
 
 								<h3>Evidence</h3>
-								<p>Our pipeline successfully consolidated millions of data rows. The Azure Data Factory orchestration (pl_bronze_ingest) seamlessly handled the raw data load, while the Gold Layer SQL analytics accurately generated the $147,565 financial provision breakdown.</p>
-
+								<p>Our pipeline successfully consolidated millions of data rows. The Azure Data Factory orchestration seamlessly handled the raw data load, while the Gold Layer SQL analytics accurately generated the $147,565 Magna Carta financial provision breakdown. Additionally, the final one-page consolidated dashboard successfully traces upstream raw material deficits to downstream client impact, utilizing urgency-driven conditional formatting to instantly flag 660 at-risk production units and prioritize critical sales orders.</p>
+								
 								<h3>Challenges & fixes</h3>
 								<p>A key challenge was structuring unstructured, multi-source data without losing historical integrity for auditing purposes. We resolved this by adopting a non-destructive ingestion strategy into the Bronze Layer (keeping native formats) and utilizing Azure Databricks in the Silver Layer to incrementally apply complex business rules, such as automatically flagging unexpired materials with 9+ months of zero consumption as Magna Carta Dead Stock.</p>
 
