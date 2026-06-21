@@ -137,28 +137,28 @@
 								<p><em>[Add a screenshot or short summary of the AI/Python tutorial work.]</em></p>
 								<hr />
 
-								<h2>Project Industry (PPG): Real-Time Sentiment Classification Pipeline</h2>
-								<p>Group project &mdash; proposal, development and report, built with teammates handling streaming (Apache Kafka/Spark) and batch processing, while my role focused on visualization and dashboard development on top of the Elasticsearch-backed pipeline.</p>
+								<h2>Project Industry (PPG): Cloud-Based Inventory Risk Management Pipeline</h2>
+								<p>Group project (Group 7) &mdash; proposal, development, and report. Built an automated ELT pipeline utilizing the Medallion Architecture to transition raw supply chain data into analytics-ready insights for inventory risk assessment.</p>
 
 								<h3>Problem & overview</h3>
-								<p><em>[1-2 sentences: what problem the pipeline solves and why PPG needed it.]</em></p>
+								<p>PPG faced challenges managing inventory data dispersed over several operational datasets, limiting visibility into excess inventory, dead stock, and expired supplies. We designed an automated data pipeline to proactively detect Recoverable Assets (RA) and Magna Carta obsolete inventory, ultimately allowing for the identification of over $1.73M in excess capital.</p>
 
 								<h3>Architecture</h3>
-								<!-- TODO: add an architecture diagram image once you have one -->
-								<p><em>[Add a simple diagram or description: data source &rarr; Kafka &rarr; batch/streaming consumers &rarr; CNN models &rarr; Elasticsearch &rarr; dashboard.]</em></p>
+								<span class="image fit"><img src="images/Azure Data Orchestration.png" alt="Medallion Architecture Pipeline Diagram" /></span>
+								<p><strong>Data Flow:</strong> Six Operational CSVs &rarr; Azure Data Factory (Bronze Layer Ingestion) &rarr; Azure Data Lake &rarr; Azure Databricks (Silver Layer Cleaning & Business Logic) &rarr; Azure SQL Database (Gold Layer Star Schema) &rarr; Microsoft Power BI (Interactive Dashboards).</p>
 
-								<h3>My role: the dashboard</h3>
-								<!-- TODO: add dashboard screenshots once built -->
-								<p><em>[Describe what you built for the dashboard and which tool you used (Kibana / notebook / standalone HTML), with a screenshot.]</em></p>
+								<h3>My role & contributions</h3>
+								<span class="image fit"><img src="images/PPG Dashboard.png" alt="PPG Case Study Dashboard" /></span>
+								<p>Beyond collaborative pipeline development, I drafted and refined the technical justifications for the data architecture layers, emphasizing the Auditability, Quality Control, and Performance arguments behind our Bronze/Silver/Gold strategy. I also contributed to structuring the dimensional Star Schema in the Azure SQL Database to feed our interactive Power BI logistics dashboards.</p>
 
 								<h3>Evidence</h3>
-								<p><em>[Add screenshots of the CNN training notebook and the training history plots.]</em></p>
+								<p>Our pipeline successfully consolidated millions of data rows. The Azure Data Factory orchestration (pl_bronze_ingest) seamlessly handled the raw data load, while the Gold Layer SQL analytics accurately generated the $147,565 financial provision breakdown.</p>
 
 								<h3>Challenges & fixes</h3>
-								<p><em>[A good concrete example to include: the Keras 3 `Embedding` layer `input_length` deprecation error you hit, and how you resolved it using an explicit `Input` layer.]</em></p>
+								<p>A key challenge was structuring unstructured, multi-source data without losing historical integrity for auditing purposes. We resolved this by adopting a non-destructive ingestion strategy into the Bronze Layer (keeping native formats) and utilizing Azure Databricks in the Silver Layer to incrementally apply complex business rules, such as automatically flagging unexpired materials with 9+ months of zero consumption as Magna Carta Dead Stock.</p>
 
 								<h3>Reflection</h3>
-								<p><em>[Tie this back to CLO1-CLO3: what you learned about data engineering systems, current technologies, and real-world challenges through this project.]</em></p>
+								<p>This project effectively bridged academic data engineering concepts with enterprise-grade solutions. Designing a robust Medallion Architecture in Microsoft Azure demonstrated how proper data layering directly impacts business intelligence, query performance, and proactive financial risk mitigation. Grounding our data strategy in verified industry models like Gorelik's The Enterprise Data Lake proved essential for maintaining a clean, scalable data environment.</p>
 								<hr />
 
 								<h2>Project Individual</h2>
