@@ -130,7 +130,18 @@
 								<hr />
 
 								<h3>Apache (Spark) Tutorial</h3>
-								<p><em>[Add a screenshot or short summary of the Apache Spark tutorial work.]</em></p>
+								<h5>Apache Spark ETL Pipeline: Censo Escolar</h5>
+								<p>
+									<strong>Project Overview:</strong> Developed an end-to-end ETL (Extract, Transform, Load) pipeline to process and analyze the Brazilian School Census dataset. The objective was to transform a large-scale, flat CSV file into a query-optimized multidimensional data model.
+								</p>
+								<ul>
+									<li><strong>Extraction & Transformation:</strong> Utilized <strong>PySpark</strong> to ingest the raw data, generate surrogate primary keys, and dynamically construct a Star Schema consisting of a central Fact table and 9 descriptive Dimension tables.</li>
+									<li><strong>Infrastructure & Loading:</strong> Containerized the local architecture using <strong>Docker</strong> and loaded the transformed schema into a <strong>PostgreSQL</strong> data warehouse.</li>
+									<li><strong>Visualization:</strong> Connected <strong>Metabase</strong> to the relational database to serve interactive business intelligence dashboards and validate the data model.</li>
+								</ul>
+								<p>
+									<em>Reference:</em> Pipeline architecture inspired by the guide <a href="https://joaopedro214.medium.com/creating-a-simple-etl-pipeline-with-apache-spark-825cc17c8cf6" target="_blank">Creating a Simple ETL Pipeline With Apache Spark</a>.
+								</p>
 								<hr />
 
 								<h3>AI / Python Tutorial</h3>
