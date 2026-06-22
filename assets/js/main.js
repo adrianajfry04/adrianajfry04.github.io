@@ -256,3 +256,9 @@
 		}
 
 })(jQuery);
+
+$(document).ready(function() {
+		$("#nav-placeholder").load("nav.html", function() {
+			console.log("Navigation loaded successfully!");
+		});
+	});
