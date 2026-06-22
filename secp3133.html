@@ -128,10 +128,10 @@
                         <p>In this project, we tackled the challenge of processing a massive 10-year flight dataset containing over 61 million records. We applied memory-efficient data handling strategies—including selective column loading, chunking, and data type optimization—to successfully load and manipulate the data without exceeding standard RAM constraints. Furthermore, we conducted a robust comparative analysis benchmarking standard Pandas against scalable libraries like Dask and Polars, measuring peak memory usage and execution time to demonstrate the necessity of parallel processing and lazy evaluation in big data environments.</p>
                         <div class="attachment" style="margin-top: 20px;">
                             <strong>Attached Document:</strong><br>
-                            <a href="images/big_data.md" target="_blank" style="display: inline-block; margin-top: 10px; padding: 10px 15px; background-color: #0056b3; color: #ffffff; text-decoration: none; border-radius: 4px; font-weight: bold;">
+                            <a href="files/big_data.md" target="_blank" style="display: inline-block; margin-top: 10px; padding: 10px 15px; background-color: #0056b3; color: #ffffff; text-decoration: none; border-radius: 4px; font-weight: bold;">
                                 📄 View SECP3133 Markdown Report (MD)
                             </a> |
-                            <a href="images/big_data.ipynb" target="_blank" style="display: inline-block; margin-top: 10px; padding: 10px 15px; background-color: #0056b3; color: #ffffff; text-decoration: none; border-radius: 4px; font-weight: bold;">
+                            <a href="files/big_data.ipynb" target="_blank" style="display: inline-block; margin-top: 10px; padding: 10px 15px; background-color: #0056b3; color: #ffffff; text-decoration: none; border-radius: 4px; font-weight: bold;">
                                 📊 View Jupyter Notebook (IPYNB)
                             </a> 
                         </div>
@@ -150,9 +150,9 @@
                         </ul>
                         <p><strong>Reflection:</strong> <em>The most significant challenge was overcoming memory exhaustion and connection crashes during the deep-pagination scraping phase, which required redesigning the scraper into a resilient "Append-Only" batching engine. Transitioning from Pandas to Polars completely shifted my perspective on large-scale data engineering; witnessing how multi-threading and strict schema typing could bypass single-core bottlenecks to process 120,000+ rows in under 7 seconds proved that framework selection is just as critical as hardware.</em></p>
                         <p><strong>Project Files:</strong> 
-                            <a href="https://github.com/drshahizan/HPDP/tree/main/2526/project/p1/shopping" target="_blank" style="display: inline-block; margin-top: 10px; padding: 10px 15px; background-color: #0056b3; color: #ffffff; text-decoration: none; border-radius: 4px; font-weight: bold;">[📂 GitHub Repository]</a> | 
-                            <a href="pdf/HPDP Report P1.pdf" target="_blank" style="display: inline-block; margin-top: 10px; padding: 10px 15px; background-color: #0056b3; color: #ffffff; text-decoration: none; border-radius: 4px; font-weight: bold;">[📄 Final Report (PDF)]</a> | 
-                            <a href="images/clean_and_optimization.ipynb" target="_blank" style="display: inline-block; margin-top: 10px; padding: 10px 15px; background-color: #0056b3; color: #ffffff; text-decoration: none; border-radius: 4px; font-weight: bold;">[⚙️ Optimization Notebook]</a>
+                            <a href="https://github.com/drshahizan/HPDP/tree/main/2526/project/p1/shopping" target="_blank" style="display: inline-block; margin-top: 10px; padding: 10px 15px; background-color: #0056b3; color: #ffffff; text-decoration: none; border-radius: 4px; font-weight: bold;">📂 GitHub Repository</a> | 
+                            <a href="pdf/HPDP Report P1.pdf" target="_blank" style="display: inline-block; margin-top: 10px; padding: 10px 15px; background-color: #0056b3; color: #ffffff; text-decoration: none; border-radius: 4px; font-weight: bold;">📄 Final Report (PDF)</a> | 
+                            <a href="files/clean_and_optimization.ipynb" target="_blank" style="display: inline-block; margin-top: 10px; padding: 10px 15px; background-color: #0056b3; color: #ffffff; text-decoration: none; border-radius: 4px; font-weight: bold;">⚙️ Optimization Notebook</a>
                         </p>
                     </div>
                     <hr />
@@ -171,7 +171,7 @@
                         </ul>
                         <p><strong>Reflection:</strong> Working with real-time data streams introduced challenges that batch processing does not — particularly around pipeline coordination, where Kafka, Elasticsearch, and the CNN consumer must all be running simultaneously for the system to function correctly. Unlike batch processing where data is static and errors can be fixed before rerunning, streaming requires careful handling of message ordering, consumer timeouts, and partial batch writes. Setting up the infrastructure locally using Docker also surfaced hardware constraints around memory and disk space that would not appear in a cloud environment.</p>
                         <p><strong>Project Files:</strong> 
-                        <a href="https://github.com/drshahizan/HPDP/tree/main/2526/project/p2/shopping" target="_blank" style="display: inline-block; margin-top: 10px; padding: 10px 15px; background-color: #0056b3; color: #ffffff; text-decoration: none; border-radius: 4px; font-weight: bold;">[📂 GitHub Repository]</a>
+                        <a href="https://github.com/drshahizan/HPDP/tree/main/2526/project/p2/shopping" target="_blank" style="display: inline-block; margin-top: 10px; padding: 10px 15px; background-color: #0056b3; color: #ffffff; text-decoration: none; border-radius: 4px; font-weight: bold;">📂 GitHub Repository</a>
                     </div>
                     <hr />
 
