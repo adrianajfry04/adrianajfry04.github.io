@@ -64,7 +64,7 @@
 							</a> |
 							<a href="images/big_data.ipynb" target="_blank" style="display: inline-block; margin-top: 10px; padding: 10px 15px; background-color: #0056b3; color: #ffffff; text-decoration: none; border-radius: 4px; font-weight: bold;">
 								📊 View Jupyter Notebook (IPYNB)
-							</a> |
+							</a> 
 						</div>
 					</div>
 					<hr />
@@ -100,9 +100,9 @@
 							<li><strong>Processing:</strong> A 1D Convolutional Neural Network (CNN) trained on the cleaned review dataset was integrated into both a streaming consumer (reading from Kafka) and a batch consumer (using local Spark session), applying tokenization and padded sequence inference to classify each review's sentiment.</li>
 							<li><strong>Outcome:</strong> Classified results are indexed into Elasticsearch across three indices — <em>sentiment_results</em> (streaming), <em>sentiment_batch</em> (batch), and <em>performance_metrics</em> — and visualized in Kibana with sentiment distribution charts, trend over time, and batch vs. streaming performance comparisons. <em>(Dashboard currently in progress.)</em></li>
 						</ul>
-
 						<p><strong>Reflection:</strong> Working with real-time data streams introduced challenges that batch processing does not — particularly around pipeline coordination, where Kafka, Elasticsearch, and the CNN consumer must all be running simultaneously for the system to function correctly. Unlike batch processing where data is static and errors can be fixed before rerunning, streaming requires careful handling of message ordering, consumer timeouts, and partial batch writes. Setting up the infrastructure locally using Docker also surfaced hardware constraints around memory and disk space that would not appear in a cloud environment.</p>
-						
+						<p><strong>Project Files:</strong> 
+                        <a href="https://github.com/drshahizan/HPDP/tree/main/2526/project/p2/shopping" target="_blank" target="_blank" style="display: inline-block; margin-top: 10px; padding: 10px 15px; background-color: #0056b3; color: #ffffff; text-decoration: none; border-radius: 4px; font-weight: bold;">[📂 GitHub Repository]</a>
 					</div>
 					<hr />
 
