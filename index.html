@@ -8,8 +8,17 @@
         <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 
         <style>
+            /* Hides the star logo on the homepage */
             #header {
                 display: none !important;
+            }
+
+            /* Forces all featured project images to be the exact same size */
+            .posts article .image.fit img {
+                width: 100%;
+                height: 250px; /* You can adjust this number to make them taller or shorter */
+                object-fit: cover; /* This is the magic! It crops the image to fit the box perfectly without stretching */
+                object-position: center; /* Keeps the center of your image visible */
             }
         </style>
 
@@ -54,7 +63,7 @@
                             <h2>Car CO2 Emission<br />
                             Data Analysis</h2>
                         </header>
-                        <a href="https://github.com/adrianajfry04/Car_CO2_Emission_Data_Analysis" target="_blank" class="image fit"><img src="images/carbon co2.jpg" alt="Car CO2 Emission Analysis" /></a>
+                        <a href="https://github.com/adrianajfry04/Car_CO2_Emission_Data_Analysis" target="_blank" class="image fit"><img src="images/carbon co2.jpeg" alt="Car CO2 Emission Analysis" /></a>
                         <p>An exploratory data analysis project focusing on vehicular CO2 emissions to uncover environmental impacts, vehicle efficiency trends, and correlations across different engine types.</p>
                         
                         <ul class="actions special">
@@ -73,6 +82,39 @@
 
                         <ul class="actions special">
                             <li><a href="https://github.com/adrianajfry04/sistem-koperasi-kada" target="_blank" class="button">See More...</a></li>
+                        </ul>
+                    </article>
+
+                    <!-- Highlight 3: Sky Pie Game -->
+                    <article>
+                        <header>
+                            <span class="date">Game Development</span>
+                            <h2>Sky Pie<br />
+                            Game</h2>
+                        </header>
+                        <!-- Note: You can change the img src below to a screenshot of your game! -->
+                        <a href="https://github.com/adrianajfry04/Sky_Pie_Game" target="_blank" class="image fit"><img src="images/sky pie.png" alt="Sky Pie Game" /></a>
+                        <p>An interactive game application built to demonstrate core programming fundamentals, event-driven architecture, and graphical user interface (GUI) design.</p>
+                        
+                        <!-- Direct Link Button -->
+                        <ul class="actions special">
+                            <li><a href="https://github.com/adrianajfry04/Sky_Pie_Game" target="_blank" class="button">See More...</a></li>
+                        </ul>
+                    </article>
+
+                    <!-- Highlight 4: Library Management System -->
+                    <article>
+                        <header>
+                            <span class="date">Software Engineering</span>
+                            <h2>Library Management<br />
+                            System</h2>
+                        </header>
+                        <a href="https://github.com/adrianajfry04/Library_Management_System" target="_blank" class="image fit"><img src="images/library.jpg" alt="Library Management System" /></a>
+                        <p>A comprehensive software solution designed to digitize library operations, featuring modules for book inventory tracking, user registration, and borrowing/returning workflows.</p>
+
+                        <!-- Direct Link Button -->
+                        <ul class="actions special">
+                            <li><a href="https://github.com/adrianajfry04/Library_Management_System" target="_blank" class="button">See More...</a></li>
                         </ul>
                     </article>
 
