@@ -72,6 +72,66 @@ input, select, textarea {
 	appearance: none;
 }
 
+/* Custom Dropdown Styling */
+#nav .links li.has-dropdown {
+    position: relative;
+    overflow: visible;
+}
+
+#nav .links li.has-dropdown .dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #ffffff;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    min-width: 250px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+#nav .links li.has-dropdown:hover .dropdown {
+    display: block;
+}
+
+#nav .links li.has-dropdown .dropdown > li {
+    position: relative;
+    border-bottom: 1px solid #eeeeee;
+}
+
+#nav .links li.has-dropdown .dropdown > li > a {
+    display: block;
+    padding: 12px 20px;
+    color: #333333 !important;
+    text-decoration: none;
+    text-transform: none;
+    font-size: 0.9rem;
+}
+
+#nav .links li.has-dropdown .dropdown > li > a:hover {
+    background-color: #f5f5f5;
+}
+
+/* Custom Nested Submenu Styling */
+#nav .links li.has-dropdown .dropdown li.has-submenu .submenu {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    background-color: #ffffff;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    min-width: 260px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#nav .links li.has-dropdown .dropdown li.has-submenu:hover .submenu {
+    display: block;
+}
+
 /* Basic */
 
 	@-ms-viewport {
