@@ -111,8 +111,19 @@
 
 								<h2>Tutorials</h2>
 
-								<h3>MS Azure: End-to-End Data Pipeline</h3>
-								<p><em>[Add a screenshot or short summary of what you built/configured in Azure, and one thing that was tricky.]</em></p>
+								<h3>MS Azure: End-to-End Data Engineering</h3>
+								<img src="images/MS Azure Dashboard.png" alt="Power BI Smart City Dashboard" style="max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 4px; margin-bottom: 15px;" />
+								<p>
+									<strong>Project Overview:</strong> Developed a cloud-based, end-to-end data engineering pipeline to process and analyze a Smart City operational dataset. The objective was to migrate data from a local simulation environment into a scalable, query-optimized lakehouse data model.
+								</p>
+								<ul>
+									<li>**Extraction & Transformation:** Utilized **Azure Data Factory** to ingest raw data from an on-premises SQL Server database (`.\SQLEXPRESS`), orchestrating incremental data loading across the **Medallion Architecture** (Bronze, Silver, and Gold layers) using **Azure Databricks**.</li>
+									<li>**Infrastructure & Security:** Implemented security baselines directly within **Azure Data Lake Storage Gen2** by utilizing **Azure Managed Identities** and direct role assignments to bypass environment access restrictions and secure pipeline execution.</li>
+									<li>**Visualization:** Connected **Azure Synapse Analytics Serverless SQL** views to **Power BI Desktop**, implementing complex data modeling schemas to provide interactive analytics, tracking dynamic catalog shifts such as live inventory scaling.</li>
+								</ul>
+								<p>
+									*Reference:* Cloud infrastructure and pipeline architecture inspired by the guide <a href="https://www.youtube.com/watch?v=R9_uR-u_K28" target="_blank">Azure Data Engineering End-to-End Project by Kahan Data Solutions</a>.
+								</p>
 								<hr />
 
 								<h3>Apache Spark ETL Pipeline: Censo Escolar</h3>
@@ -128,6 +139,10 @@
 								<p>
 									<em>Reference:</em> Pipeline architecture inspired by the guide <a href="https://joaopedro214.medium.com/creating-a-simple-etl-pipeline-with-apache-spark-825cc17c8cf6" target="_blank">Creating a Simple ETL Pipeline With Apache Spark</a>.
 								</p>
+								<hr />
+
+								<h3>AI</h3>
+								<p><em>[Add a screenshot or short summary of the AI/Python tutorial work.]</em></p>
 								<hr />
 
 								<h3>Article Case Study</h3>
