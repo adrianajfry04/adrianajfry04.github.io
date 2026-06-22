@@ -4760,4 +4760,29 @@ input, select, textarea {
 	}
 
 
-	
+/* Custom Horizontal Line Separators */
+.line-separator {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 4em 0 2em 0; /* Spacing above and below */
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #3b4246; /* A soft dark gray/blue to match your template */
+    letter-spacing: 1px;
+}
+
+.line-separator::before,
+.line-separator::after {
+    content: '';
+    flex: 1; /* This makes the lines stretch to fill the empty space */
+    border-bottom: 1px solid #e2e2e2; /* The thin light gray line */
+}
+
+.line-separator::before {
+    margin-right: 1.5em; /* Space between the left line and the text */
+}
+
+.line-separator::after {
+    margin-left: 1.5em; /* Space between the right line and the text */
+}	
