@@ -106,10 +106,10 @@
 
 									<h3>Event Experiences</h3>
 									<ul>
-										<li><strong>GASARI Ignite 2026:</strong> Vice Secretary (Apr. 2026)[cite: 2]</li>
-										<li><strong>CODE' 26:</strong> Registration Unit Leader (Dec. 2025 - Jan. 2026)[cite: 2]</li>
-										<li><strong>Computing Gala 2025:</strong> Stage Manager (May - June 2025)[cite: 2]</li>
-										<li><strong>Majlis Gemilang Anugerah Mahasiswa 2024:</strong> Multimedia Unit Leader (Mar. - May 2025)[cite: 2]</li>
+										<li><strong>GASARI Ignite 2026:</strong> Vice Secretary (Apr. 2026)</li>
+										<li><strong>CODE' 26:</strong> Registration Unit Leader (Dec. 2025 - Jan. 2026)</li>
+										<li><strong>Computing Gala 2025:</strong> Stage Manager (May - June 2025)</li>
+										<li><strong>Majlis Gemilang Anugerah Mahasiswa 2024:</strong> Multimedia Unit Leader (Mar. - May 2025)</li>
 									</ul>
 
 								</section>
@@ -129,7 +129,15 @@
 			<script src="assets/js/browser.min.js"></script>
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+			<script>
+				$(document).ready(function() {
+					// 1. Load the navigation menu first
+					$("#nav-placeholder").load("nav.html", function() {
+						// 2. ONLY AFTER the menu is loaded, trigger the template's main script
+						$.getScript("assets/js/main.js");
+					});
+				});
+			</script>
 
 	</body>
 </html>

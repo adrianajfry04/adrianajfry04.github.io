@@ -25,11 +25,6 @@
 						<h2>Coursework &<br />
 						Projects</h2>
 					</header>
-					
-					<!-- Jump Menu (Updated to only show Semester 2) -->
-					<ul class="actions fit" style="margin-top: 2em;">
-						<li><a href="#sem2" class="button primary fit scrolly">Jump to Year 3 Semester 2</a></li>
-					</ul>
 				</article>
 
 				<!-- ========================================== -->
@@ -107,7 +102,15 @@
 			<script src="assets/js/browser.min.js"></script>
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+			<script>
+				$(document).ready(function() {
+					// 1. Load the navigation menu first
+					$("#nav-placeholder").load("nav.html", function() {
+						// 2. ONLY AFTER the menu is loaded, trigger the template's main script
+						$.getScript("assets/js/main.js");
+					});
+				});
+			</script>
 
 	</body>
 </html>

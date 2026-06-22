@@ -102,16 +102,21 @@
 								<p><em>[Add your 1-page poster here, then replace this with your reflection on the TM industry talk and how it connects to what you're building in the course.]</em></p>
 								<hr />
 
+								<h2>Industry Talk &mdash; Izeno</h2>
+								<p><span class="date">Format: 1-page poster</span></p>
+								<!-- TODO: replace with your actual file once ready -->
+								<!-- <span class="image fit"><img src="images/industry-talk-tm.jpg" alt="" /></span> -->
+								<p><em>[Add your 1-page poster here, then replace this with your reflection on the TM industry talk and how it connects to what you're building in the course.]</em></p>
+								<hr />
+
 								<h2>Tutorials</h2>
 
-								<h3>Azure Tutorial</h3>
+								<h3>MS Azure: End-to-End Data Pipeline</h3>
 								<p><em>[Add a screenshot or short summary of what you built/configured in Azure, and one thing that was tricky.]</em></p>
 								<hr />
 
 								<h3>Apache Spark ETL Pipeline: Censo Escolar</h3>
-
 								<img src="images/Metabase Dashboard.jpg" alt="Censo Escolar Metabase Dashboard" style="max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 4px; margin-bottom: 15px;" />
-
 								<p>
 									<strong>Project Overview:</strong> Developed an end-to-end ETL (Extract, Transform, Load) pipeline to process and analyze the Brazilian School Census dataset. The objective was to transform a large-scale, flat CSV file into a query-optimized multidimensional data model.
 								</p>
@@ -125,7 +130,11 @@
 								</p>
 								<hr />
 
-								<h3>AI / Python Tutorial</h3>
+								<h3>Article Case Study</h3>
+								<p><em>[Add a screenshot or short summary of the AI/Python tutorial work.]</em></p>
+								<hr />
+
+								<h3>GenAI: Weather Forecasting with LLMs</h3>
 								<p><em>[Add a screenshot or short summary of the AI/Python tutorial work.]</em></p>
 								<hr />
 
@@ -202,7 +211,15 @@
 			<script src="assets/js/browser.min.js"></script>
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+			<script>
+				$(document).ready(function() {
+					// 1. Load the navigation menu first
+					$("#nav-placeholder").load("nav.html", function() {
+						// 2. ONLY AFTER the menu is loaded, trigger the template's main script
+						$.getScript("assets/js/main.js");
+					});
+				});
+			</script>
 
 	</body>
 </html>
