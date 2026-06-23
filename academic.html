@@ -15,7 +15,7 @@
 
             <div id="main">
 
-                <article class="post featured" style="margin-bottom: 2em; padding-bottom: 2em;">
+                <article class="post featured" style="margin-bottom: 2em; padding-bottom: 2em; border-bottom: none;">
                     <header class="major">
                         <span class="date">Academic Journey</span>
                         <h2>Coursework &<br />
@@ -122,18 +122,23 @@
                     </table>
                 </div>
 
-            <div id="copyright">
+            </div> <div id="copyright">
                 <ul><li>&copy; <a href="https://html5up.net">HTML5 UP</a></li><li>Design: Adriana Jefri</li></ul>
             </div>
 
-        </div>
-
-        <script src="assets/js/jquery.min.js"></script>
+        </div> <script src="assets/js/jquery.min.js"></script>
         <script src="assets/js/jquery.scrollex.min.js"></script>
         <script src="assets/js/jquery.scrolly.min.js"></script>
         <script src="assets/js/browser.min.js"></script>
         <script src="assets/js/breakpoints.min.js"></script>
         <script src="assets/js/util.js"></script>
+        <script>
+            $(document).ready(function() {
+                $("#nav-placeholder").load("nav.html", function() {
+                    $.getScript("assets/js/main.js");
+                });
+            });
+        </script>
 
     </body>
 </html>

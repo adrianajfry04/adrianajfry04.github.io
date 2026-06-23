@@ -18,14 +18,16 @@
 </nav>
 
 <script>
-    // This runs as soon as nav.html is loaded into the page
     $(document).ready(function() {
-        // We target the copyright section that exists at the bottom of all your pages
-        // and inject the button right above it!
-        $("#copyright").before(`
-            <div style="text-align: center; padding: 2em 0;">
-                <a href="#wrapper" class="button primary icon solid fa-arrow-up scrolly">Back to Top</a>
-            </div>
-        `);
+        // 1. Check if the button already exists (length === 0 means it does NOT exist yet)
+        if ($("#auto-back-to-top").length === 0) {
+            
+            // 2. If it doesn't exist, safely inject it above the copyright section
+            $("#copyright").before(`
+                <div id="auto-back-to-top" style="text-align: center; padding: 2em 0;">
+                    <a href="#wrapper" class="button primary icon solid fa-arrow-up scrolly">Back to Top</a>
+                </div>
+            `);
+        }
     });
 </script>
