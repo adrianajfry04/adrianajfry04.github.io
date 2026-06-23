@@ -133,6 +133,15 @@
         <script src="assets/js/browser.min.js"></script>
         <script src="assets/js/breakpoints.min.js"></script>
         <script src="assets/js/util.js"></script>
+        <script>
+            $(window).on('scroll', function() {
+                // Check if the user has scrolled back to the absolute top of the page
+                if ($(window).scrollTop() === 0) {
+                    // Smoothly fade the banner back in
+                    $('#intro').fadeIn(500); 
+                }
+            });
+        </script>
         
         <script>
             $(document).ready(function() {
